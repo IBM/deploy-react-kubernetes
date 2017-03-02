@@ -1,3 +1,24 @@
-# react-redux-api-example
+# React-redux-api-example
 
-*More information about project is coming soon* 
+This project calls the OMDb API to get information about a movie the user entered using React and Redux. 
+
+Tools used: 
+- React
+- Redux
+- OMDB API 
+- Webpack
+- Babel
+- Sass 
+
+## How to run the project 
+
+In the project directory run: 
+
+`npm install`
+
+`npm run build-css` 
+
+`npm run start:dev`
+
+## Results
+
