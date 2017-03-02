@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-// import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from '../actions'
-// import Movies from '../components/Movies'
+import List from '../components/List'
 import * as MoviesAction from '../actions/action'
 import { bindActionCreators } from 'redux'
+import '../style/main.css';
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class App extends Component {
 
   retrieveMovies(callback) {
     this.props.retrieveMovies(this.state.movie);
-    this.setState({ getMovies: true });
+    setTimeout(() => {this.setState({ getMovies: true })}, 1000);
   }
 
   handleChange(e) {
@@ -29,11 +29,15 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>HELLO WORLD</h1>
-        <input type="text" className="movie-info" value={this.state.movie} onChange={this.handleChange.bind(this)}/>
-        <button onClick={() => this.retrieveMovies()}/>
-        { this.state.getMovies ? <p>{JSON.stringify(this.props.movies.items, undefined, 4)}</p> : null }
+      <div className="container">
+        <h1>Movie Finder</h1>
+        <div className="set">
+          <input type="text" className="input" placeholder="Enter movie..." value={this.state.movie} onChange={this.handleChange.bind(this)}/>
+          <button className="button" onClick={() => this.retrieveMovies()}>Find movie</button>
+        </div>
+        { this.state.getMovies ?
+          <List movies={this.props.movies} />
+        : null }
       </div>
     );
   }

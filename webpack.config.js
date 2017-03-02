@@ -6,7 +6,8 @@ var env = process.env.NODE_ENV
 var config = {
   module: {
     loaders: [
-      { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ }
+      { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
+      { test: /\.scss$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']}
     ]
   },
   output: {
