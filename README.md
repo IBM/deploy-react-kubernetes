@@ -22,3 +22,4 @@ In the project directory run:
 
 ## Results
 
+<img width="1176" alt="screen shot 2017-03-02 at 3 31 42 pm" src="https://cloud.githubusercontent.com/assets/18426780/23528292/f3a1f20e-ff5e-11e6-854b-962913beb729.png">
