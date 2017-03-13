@@ -17,7 +17,7 @@ class App extends Component {
 
   retrieveMovies(callback) {
     this.props.retrieveMovies(this.state.movie);
-    setTimeout(() => {this.setState({ getMovies: true })}, 1000);
+    setTimeout(() => {this.setState({ getMovies: true })}, 800);
   }
 
   handleChange(e) {
@@ -30,10 +30,10 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Movie Finder</h1>
+        <h1>Find That Movie</h1>
         <div className="set">
           <input type="text" className="input" placeholder="Enter movie..." value={this.state.movie} onChange={this.handleChange.bind(this)}/>
-          <button className="button" onClick={() => this.retrieveMovies()}>Find movie</button>
+          <button className="button" onClick={() => this.retrieveMovies()}>Search</button>
         </div>
         { this.state.getMovies ?
           <List movies={this.props.movies} />
