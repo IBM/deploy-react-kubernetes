@@ -35,7 +35,8 @@ ul {
   letter-spacing: 1px;
   font-weight: 400;
   margin-right: 2em;
-  border-radius: 5px; }
+  border-radius: 5px;
+  text-indent: 10px; }
 
 input[type=text]:focus {
   outline: none; }
