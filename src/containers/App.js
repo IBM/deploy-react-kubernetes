@@ -17,7 +17,6 @@ class App extends Component {
   }
 
   retrieveMovies(callback) {
-    console.log(this.state.movie);
     if(this.props.retrieveMovies(this.state.movie)) {
       this.setState({getMovies: true});
     }
