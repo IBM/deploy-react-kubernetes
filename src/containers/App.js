@@ -8,7 +8,8 @@ import '../style/main.css';
 class App extends Component {
   constructor(props) {
     super(props)
-
+    this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.state = {
       movie: '',
       getMovies: false
@@ -16,8 +17,10 @@ class App extends Component {
   }
 
   retrieveMovies(callback) {
-    this.props.retrieveMovies(this.state.movie);
-    setTimeout(() => {this.setState({ getMovies: true })}, 800);
+    console.log(this.state.movie);
+    if(this.props.retrieveMovies(this.state.movie)) {
+      this.setState({getMovies: true});
+    }
   }
 
   handleChange(e) {
@@ -27,12 +30,18 @@ class App extends Component {
     }
   }
 
+  handleKeyPress(target) {
+   if(target.charCode===13){
+     this.retrieveMovies();
+   }
+ }
+
   render() {
     return (
       <div className="container">
         <h1>Find That Movie</h1>
         <div className="set">
-          <input type="text" className="input" placeholder="Enter movie..." value={this.state.movie} onChange={this.handleChange.bind(this)}/>
+          <input type="text" className="input" placeholder="Enter movie..." value={this.state.movie} onChange={this.handleChange} onKeyPress={this.handleKeyPress}/>
           <button className="button" onClick={() => this.retrieveMovies()}>Search</button>
         </div>
         { this.state.getMovies ?

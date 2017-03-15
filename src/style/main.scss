@@ -7,13 +7,18 @@ body {
 
 p {
   color: $grey;
-  margin: 1em;
+  margin: 1em 1em 1em 0;
 }
 
 h1 {
   color: $white;
   font-size: 3em;
   font-weight: 800;
+}
+
+ul {
+  list-style: none;
+  margin-left: -1.5em;
 }
 
 .container {
@@ -70,7 +75,7 @@ input[type=text]:focus {
   width: 100%;
   margin-top: 2em;
   background: $white;
-  height: 400px;
+  min-height: 500px;
   border-radius: 5px;
   margin-bottom: 2em;
 }
