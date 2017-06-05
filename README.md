@@ -18,7 +18,7 @@ In the project directory run:
 
 `npm run build-css` 
 
-`npm run start:dev`
+`npm run start`
 
 ## Results
 
