@@ -1,0 +1,88 @@
+@import '_variables.scss';
+
+body {
+  background: $primary;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p {
+  color: $grey;
+  margin: 1em 1em 1em 0;
+}
+
+h1 {
+  color: $white;
+  font-size: 3em;
+  font-weight: 800;
+}
+
+ul {
+  list-style: none;
+  margin-left: -1.5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.set {
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  height: 48px;
+  width: 70%;
+  border: 1px solid $primary;
+  font-size: 16px;
+  color: $grey;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-right: 2em;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+
+input[type=text]:focus {
+  outline: none;
+}
+
+.button {
+  transition: all 0.3s ease 0s;
+  height: 52px;
+  width: 25%;
+  border: 3px solid $white;
+  color: $white;
+  background: none;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: $primary;
+  background: $white;
+  outline: none;
+}
+
+.list {
+  width: 100%;
+  margin-top: 2em;
+  background: $white;
+  min-height: 500px;
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 800px;
+  }
+}
