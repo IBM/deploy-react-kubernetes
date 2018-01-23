@@ -10,6 +10,10 @@ Tools used:
 - Babel
 - Sass 
 
+## Prerequisites 
+
+You must get an API key from http://www.omdbapi.com/ in order to get a response from the API. You will insert your API key in /src/actions/action.js
+
 ## How to run the project 
 
 In the project directory run: 
