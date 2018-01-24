@@ -14,7 +14,7 @@ Tools used:
 
 You must get an API key from http://www.omdbapi.com/ in order to get a response from the API. You will insert your API key in /src/actions/action.js
 
-## How to run the project 
+## Running the project locally
 
 In the project directory run: 
 
@@ -23,6 +23,32 @@ In the project directory run:
 `npm run build-css` 
 
 `npm run start`
+
+You can now access the application at http://localhost:3000 🎉🎉🎉
+
+##  Running the project in a container
+
+Build your image: 
+
+`docker build -t <your username>/react-redux-api-example .`
+
+Your image should be listed by running:
+
+`docker images`
+
+Run the image: 
+
+`docker run -p 3000:3000 -d <your username>/react-redux-api-example`
+
+You can now access the application at http://localhost:3000 🎉🎉🎉
+
+**Check the output of the app:
+
+Get container id:
+
+`docker ps`
+
+`docker logs <container id>`
 
 ## Results
 

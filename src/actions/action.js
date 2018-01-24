@@ -27,7 +27,7 @@ function retrieveMoviesSuccess(response) {
 export function retrieveMovies(userInput) {
   return dispatch => {
   // Insert your api key on line 30
-  const URL = `http://www.omdbapi.com/?apikey=[insert your api key here]&t=${userInput}`;
+  const URL = `http://www.omdbapi.com/?apikey=d8c6a83b&t=${userInput}`;
   let request = new Request(URL, {
     method: 'GET',
   });

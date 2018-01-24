@@ -16,6 +16,7 @@
     "sass-loader": "^6.0.2"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "history": "^4.5.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
