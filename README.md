@@ -42,13 +42,17 @@ Run the image:
 
 You can now access the application at http://localhost:3000 🎉🎉🎉
 
-**Check the output of the app:
+Check the output of the app:
 
 Get container id:
 
 `docker ps`
 
 `docker logs <container id>`
+
+##  Running the project in Kubernetes
+
+https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d
 
 ## Results
 
