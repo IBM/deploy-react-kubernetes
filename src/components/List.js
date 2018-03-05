@@ -1,7 +1,8 @@
-import React, { PropTypes, Component } from 'react'
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 import '../style/main.css';
 
-export default class List extends Component {
+class List extends Component {
   render() {
     var myList = [];
     for (var prop in this.props.movies.items) {
@@ -19,6 +20,10 @@ export default class List extends Component {
   }
 }
 
-List.propTypes = {
-  movies: PropTypes.object.isRequired
+function mapStateToProps(state) {
+  return {
+    movies: state.movies
+  };
 }
+
+export default connect(mapStateToProps)(List);
