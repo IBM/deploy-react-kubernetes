@@ -9,6 +9,7 @@ class Input extends Component {
     this.handleResponse = this.handleResponse.bind(this);
   }
 
+  //Callbacks for when user input changes or 'search' is clicked
   handleChange(e) {
     const { handleChange } = this.props;
     handleChange(e);
@@ -35,7 +36,7 @@ class Input extends Component {
   }
 }
 
-Input.propTypes = {
+Input.PropTypes = {
   input: PropTypes.string,
   handleChange: PropTypes.func,
   handleKeyPress: PropTypes.func,

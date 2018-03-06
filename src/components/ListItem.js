@@ -1,6 +1,4 @@
-import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
-import '../style/main.css';
+import React, { PropTypes, Component } from 'react'
 
 class ListItem extends Component {
   render() {

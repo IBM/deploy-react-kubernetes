@@ -1,10 +1,6 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react'
 import List from './List'
-import InputSet from './InputSet';
-import * as MoviesAction from '../actions'
-import { bindActionCreators } from 'redux'
-import '../style/main.css';
+import InputSet from './InputSet'
 
 class App extends Component {
 

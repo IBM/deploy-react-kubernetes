@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Input from '../components/Input'
 import * as MoviesAction from '../actions'
 import { bindActionCreators } from 'redux'
-import '../style/main.css';
 
 class InputSet extends Component {
   constructor(props) {
@@ -17,15 +16,19 @@ class InputSet extends Component {
     this.handleResponse = this.handleResponse.bind(this)
   }
 
+  // Function for when 'search' is clicked and retrieves movies
   handleResponse(input) {
     const { retrieveMovies } = this.props;
+    // eslint-disable-next-line
     const result = retrieveMovies(input);
   }
 
+  // Function for when text in input changes
   handleChange(e) {
     this.setState({ input: e.target.value });
   }
 
+  // Function for 'enter' key press
   handleKeyPress(target) {
     const { input } = this.state;
    if(target.charCode===13){
@@ -35,7 +38,6 @@ class InputSet extends Component {
 
   render() {
     const { input } = this.state;
-    const { handleResponse } = this.props;
     return (
       <div className="input-set">
         <Input movieValue={input} handleChange={this.handleChange} handleKeyPress={this.handleKeyPress} handleResponse={this.handleResponse}/>
@@ -44,17 +46,20 @@ class InputSet extends Component {
   }
 }
 
+// Set state and action as proptype
 InputSet.propTypes = {
   movies: PropTypes.object,
   retrieveMovies: PropTypes.func
 }
 
+// Map Redux state to props
 function mapStateToProps(state) {
   return {
     movies: state.movies
   };
 }
 
+// Map action to props
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(Object.assign({}, MoviesAction), dispatch);
 }

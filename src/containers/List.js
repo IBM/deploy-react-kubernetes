@@ -1,8 +1,7 @@
-import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
-import '../style/main.css';
-import ListItem from '../components/ListItem';
-import createList from '../utils';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import ListItem from '../components/ListItem'
+import createList from '../utils'
 
 class List extends Component {
   render() {
@@ -16,6 +15,7 @@ class List extends Component {
   }
 }
 
+// Map Redux state to props
 function mapStateToProps(state) {
   return {
     movies: state.movies
