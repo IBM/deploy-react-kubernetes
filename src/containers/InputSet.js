@@ -10,7 +10,6 @@ class InputSet extends Component {
     super(props)
     this.state = {
       input: '',
-      // result: {}
     }
 
     this.handleKeyPress = this.handleKeyPress.bind(this)
@@ -19,12 +18,8 @@ class InputSet extends Component {
   }
 
   handleResponse(input) {
-    const { retrieveMovies, setResults } = this.props;
+    const { retrieveMovies } = this.props;
     const result = retrieveMovies(input);
-    // this.setState({
-    //   result: result
-    // })
-    setResults(result);
   }
 
   handleChange(e) {
@@ -51,8 +46,7 @@ class InputSet extends Component {
 
 InputSet.propTypes = {
   movies: PropTypes.object,
-  retrieveMovies: PropTypes.func,
-  setResults: PropTypes.func,
+  retrieveMovies: PropTypes.func
 }
 
 function mapStateToProps(state) {

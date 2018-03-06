@@ -61,11 +61,14 @@ input[type=text]:focus {
 
 .list {
   width: 100%;
-  margin-top: 2em;
+  margin: 2rem 0; }
+
+.list-item {
+  width: 100%;
   background: #fff;
   min-height: 500px;
   border-radius: 5px;
-  margin-bottom: 2em; }
+  padding: 0.5rem 0; }
 
 @media only screen and (min-width: 992px) {
   .container {

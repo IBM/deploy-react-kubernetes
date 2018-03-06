@@ -1,20 +1,16 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import '../style/main.css';
+import ListItem from '../components/ListItem';
+import createList from '../utils';
 
 class List extends Component {
   render() {
-    var myList = [];
-    for (var prop in this.props.movies.items) {
-      if(myList.length < 13) {
-        myList.push(<li key={prop}><p>{`${prop}: ${this.props.movies.items[prop]}`}</p></li>);
-      }
-  }
+    const { movies } = this.props;
+    const myList = createList(movies);
     return (
       <div className="list">
-        <ul>
-          {myList}
-        </ul>
+        {myList.length > 0 && <ListItem list={myList} />}
     </div>
     );
   }

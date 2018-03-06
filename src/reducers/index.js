@@ -1,43 +1,12 @@
-// import { combineReducers } from 'redux'
-import ActionTypes from '../constants'
 import { combineReducers } from 'redux';
 import { routerStateReducer } from 'redux-router';
+import ActionTypes from '../constants'
 
 const initialState = {
   isFetching: false,
   items: [],
-  errorDetails: '',
-  result: ''
+  errorDetails: ''
 };
-
-// export const handlers = {
-//   [ActionTypes.RETRIEVE_MOVIES_START](state, action) {
-//     return {
-//       ...state,
-//       isFetching: true,
-//     };
-//   },
-//   [ActionTypes.RETRIEVE_MOVIES_ERROR](state, action) {
-//     return {
-//       ...state,
-//       isFetching: false,
-//       errorDetails: action.payload.error,
-//     };
-//   },
-//   [ActionTypes.RETRIEVE_MOVIES_SUCCESS](state, action) {
-//     return {
-//       ...state,
-//       isFetching: false,
-//       items: action.payload.response,
-//     };
-//   },
-//   [ActionTypes.RETRIEVE_MOVIES_SUCCESS](state, action) {
-//     return {
-//       ...state,
-//       results: action.payload.response,
-//     };
-//   },
-// };
 
 function movies(state = initialState, action) {
   switch (action.type) {
@@ -54,10 +23,6 @@ function movies(state = initialState, action) {
       return Object.assign({}, state, {
         isFetching: false,
         items: action.payload
-      })
-      case ActionTypes.SET_RESULTS:
-      return Object.assign({}, state, {
-        results: action.payload,
       })
     default:
       return state

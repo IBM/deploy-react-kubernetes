@@ -1,5 +1,5 @@
 {
-  "name": "React Redux API Example",
+  "name": "MovieFinder",
   "version": "0.0.1",
   "description": "React Redux application that calls the OMDb api to get information on a specific movie",
   "repository": "git+https://github.com/rizcheldayao/react-redux-api-example",
