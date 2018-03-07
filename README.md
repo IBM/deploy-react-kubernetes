@@ -1,4 +1,4 @@
-# React-redux-api-example
+# Movie Finder
 
 This project calls the OMDb API to get information about a movie the user entered using React and Redux. 
 
