@@ -15,6 +15,7 @@ You may obtain a copy of the License at
 import React, { Component } from 'react'
 import List from './List'
 import InputSet from './InputSet'
+import '../style/main.css';
 
 class App extends Component {
 

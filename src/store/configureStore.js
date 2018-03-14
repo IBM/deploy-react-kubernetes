@@ -12,7 +12,7 @@ You may obtain a copy of the License at
  See the License for the specific language governing permissions and
  limitations under the License.*/
 
- import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 import rootReducer from '../reducers'

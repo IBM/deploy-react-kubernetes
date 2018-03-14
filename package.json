@@ -6,11 +6,8 @@
   "devDependencies": {
     "enzyme": "^2.4.1",
     "eslint": "^2.0.0-rc.1",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-react": "^6.10.0",
     "node-sass": "^4.5.0",
-    "react-addons-test-utils": "^15.3.0",
-    "react-scripts": "^0.6.0",
+    "react-scripts": "^1.1.1",
     "redux-logger": "^2.8.1",
     "redux-router": "^2.1.2",
     "redux-thunk": "^2.2.0",
