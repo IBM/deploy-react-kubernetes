@@ -2,10 +2,16 @@
   "name": "MovieFinder",
   "version": "0.0.1",
   "description": "React Redux application that calls the OMDb api to get information on a specific movie",
-  "repository": "git+https://github.com/rizcheldayao/react-redux-api-example",
+  "repository": "git+https://github.com/IBM/deploy-react-kubernetes",
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "enzyme": "^2.4.1",
-    "eslint": "^2.0.0-rc.1",
+    "eslint": "^4.18.2",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.7.0",
     "node-sass": "^4.5.0",
     "react-scripts": "^1.1.1",
     "redux-logger": "^2.8.1",
@@ -28,6 +34,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "eslint": "eslint . --ext .js"
   }
 }

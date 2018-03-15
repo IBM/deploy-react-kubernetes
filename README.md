@@ -45,21 +45,23 @@ $ export docker_username="YOUR_DOCKER_USERNAME"
 
 ### 1. Clone the repo
 
-Clone the `react-redux-api-example` locally. In a terminal, run:
+Clone the repo locally. In a terminal, run:
 
 ```
-$ git clone https://github.com/rizcheldayao/react-redux-api-example.git
+$ git clone https://github.com/IBM/deploy-react-kubernetes
 ```
 
 ### 2. Run the application
 1. Install [Node.js](https://nodejs.org/en/)
 2. Run the following commands in a terminal: 
 
-`$ npm install`
+```
+$ npm install`
 
-`$ npm run build-css` 
+$ npm run build-css
 
-`$ npm run start`
+$ npm run start
+```
 
 ## Run the application using Docker
 1. [Build the image](#1-build-the-image)
@@ -68,18 +70,23 @@ $ git clone https://github.com/rizcheldayao/react-redux-api-example.git
 ### 1. Build the image
 
 In a terminal, run:
-
-`$ docker build -t $docker_username/deploy-react-kubernetes .`
+```
+$ docker build -t $docker_username/deploy-react-kubernetes .
+```
 
 Your image should be listed by running:
 
-`$ docker images`
+```
+$ docker images
+```
 
 ### 1. Run the image
 
 In a terminal, run:
 
-`$ docker run -p 3000:3000 -d $docker_username/deploy-react-kubernetes`
+```
+$ docker run -p 3000:3000 -d $docker_username/deploy-react-kubernetes
+```
 
 You can now access the application at http://localhost:3000
 
@@ -89,7 +96,10 @@ You can now access the application at http://localhost:3000
 2. [Deploy the application](#2-deploy-the-application)
 
 ## Prerequisites
-* Create a namespace `bx cr namespace-add <your_namespace>`
+* Create a namespace 
+```
+$ bx cr namespace-add <your_namespace>
+```
 
 ### 1. Build Docker image
 
@@ -98,7 +108,7 @@ In a terminal, run:
 $ bx cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes .
 ```
 
-### 2. Deploy the application.
+### 2. Deploy the application
 
 ``` 
 $ kubectl run deploy-react-kubernetes-deployment —-image= registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
