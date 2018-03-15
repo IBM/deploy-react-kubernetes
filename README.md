@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/IBM/deploy-react-kubernetes.svg?branch=master)](https://travis-ci.org/IBM/deploy-react-kubernetes)
+
 # Deploy a React application on Kubernetes
 
 In this Code Pattern, we will deploy a React application using Kubernetes.
