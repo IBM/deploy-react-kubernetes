@@ -5,7 +5,7 @@ install:
   - npm i -g npm@3
   - npm install
 script:
-  - npm run lint
+  - npm run eslint
   # - npm run test
 cache:
   directories:
