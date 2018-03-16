@@ -16,20 +16,20 @@ import fetch from 'isomorphic-fetch'
 import ActionTypes from '../constants'
 
 // Actions for retrieving movie
-const retrieveMoviesStart = () => {
+export const retrieveMoviesStart = () => {
   return {
     type: ActionTypes.RETRIEVE_MOVIES_START,
   };
 }
 
-const retrieveMoviesError = (error) => {
+export const retrieveMoviesError = (error) => {
   return {
     type: ActionTypes.RETRIEVE_MOVIES_ERROR,
     payload: error
   };
 }
 
-const retrieveMoviesSuccess = (response) => {
+export const retrieveMoviesSuccess = (response) => {
   return {
     type: ActionTypes.RETRIEVE_MOVIES_SUCCESS,
     payload: response
@@ -38,7 +38,7 @@ const retrieveMoviesSuccess = (response) => {
 
 export const retrieveMovies = (userInput) => {
   return dispatch => {
-  // Insert your api key on line 30
+  // Insert your api key on line 30, remove []
   const URL = `http://www.omdbapi.com/?apikey=[apiKey]&t=${userInput}`;
   let request = new Request(URL, {
     method: 'GET',

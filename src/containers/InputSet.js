@@ -34,8 +34,7 @@ class InputSet extends Component {
   // Function for when 'search' is clicked and retrieves movies
   handleResponse(input) {
     const { retrieveMovies } = this.props;
-    // eslint-disable-next-line
-    const result = retrieveMovies(input);
+    retrieveMovies(input);
   }
 
   // Function for when text in input changes
@@ -62,7 +61,7 @@ class InputSet extends Component {
 }
 
 // Set state and action as proptype
-InputSet.propTypes = {
+InputSet.PropTypes = {
   movies: PropTypes.object,
   retrieveMovies: PropTypes.func
 }

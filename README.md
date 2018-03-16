@@ -35,6 +35,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Prerequisites
 1. You must get an API key from [OMDb API](http://www.omdbapi.com/) in order to get a response from the API. You will insert your API key in /src/actions/index.js on line 42
+[OMDb API](http://www.omdbapi.com/) by Brian Fitz is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 2. Create an environment variable for your docker username
 ```
@@ -58,7 +59,7 @@ $ git clone https://github.com/IBM/deploy-react-kubernetes
 2. Run the following commands in a terminal: 
 
 ```
-$ npm install`
+$ npm install
 
 $ npm run build-css
 

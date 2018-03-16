@@ -17,7 +17,7 @@ import { connect } from 'react-redux'
 import ListItem from '../components/ListItem'
 import createList from '../utils'
 
-class List extends Component {
+export class List extends Component {
   render() {
     const { movies } = this.props;
     const myList = createList(movies);

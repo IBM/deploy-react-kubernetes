@@ -22,7 +22,7 @@ const initialState = {
   errorDetails: ''
 };
 
-function movies(state = initialState, action) {
+export function movies(state = initialState, action) {
   switch (action.type) {
     case ActionTypes.RETRIEVE_MOVIES_START:
       return Object.assign({}, state, {
