@@ -2,11 +2,19 @@
 
 # Deploy a React application on Kubernetes
 
+Do you have a front end application that contains large amounts of duplication, handles complex states, and manages large amounts of data? 
+
+React and Redux is the perfect Javascript library if your application is similar to the one described above. React provides a component based structure for everything included in an application and allows abstraction if needed to limit duplication. With Redux, it handles all of the state and can easily manage data in an application.
+
+Once an application has been developed, it needs to be deployed for the rest of the world to see. There are many choices when looking for the right solution to manage and deploy your application. It can often be overwhelming when you're trying to pick the right solution.
+
+If you're looking for a deployment tool that can provide automation, scalability and management of a deployed application, Kubernetes is the tool for you! 
+
+An application must be packaged into a container to deploy on Kubernetes. Docker is an open source tool that is used to package the application into a container. The container is then deployed on Kubernetes for public access. Once the application is deployed, Kubernetes handles the management, scalability and automation of the deployed application.
+
 In this Code Pattern, we will deploy a React application using Kubernetes.
 
-There are many choices when looking for the right solution to manage and deploy our applications. It can often be overwhelming when we're trying to pick the right solution. One of our many choices is Kubernetes. This pattern will take you through how to get a front end application deployed on Kubernetes. After implementing the code, you will have the knowledge to deploy your own applications on Kubernetes. 
-
-This repository uses the React JavaScript library to build out the front end of the application. Redux is a predictable state container used hand in hand with React. It handles all of the state management within the application. The OMDb API is called to get movie information based on user input. Docker is an open source tool that is used to package the application into a container. IBM Cloud provides one to use with Kubernetes deployments called IBM Cloud Container Service. Kubernetes handles the management and deployment of the containerized application.
+This repository uses the React Javascript library alongisde Redux to build out the front end of the application. The OMDb API is used to get movie information based on user input. Redux handles the data between the application and the API, as well as the state between components. Docker is used to package the application and Kubernetes is used to deploy the container.
 
 When the reader has completed this Code Pattern, they will understand how to:
 * Containerize a React application using Docker
@@ -141,6 +149,10 @@ You can now access the application at http://IP_ADDRESS:NODE_PORT
 # Links
 * [Demo on Youtube](https://www.youtube.com/watch?v=Jxi7U7VOMYg)
 * [Blog post](https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d)
+* [React](https://reactjs.org/)
+* [Redux](https://redux.js.org/basics/usage-with-react)
+* [Docker](https://www.docker.com/)
+* [Kubernetes](https://kubernetes.io/)
 
 # Learn more
 
