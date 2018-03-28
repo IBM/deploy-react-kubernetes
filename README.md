@@ -39,6 +39,8 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 # Watch the video
 
+* [Demo on Youtube](https://youtu.be/1Lq9vW3LuH8)
+
 # Steps
 
 ## Prerequisites
@@ -147,7 +149,7 @@ You can now access the application at http://IP_ADDRESS:NODE_PORT
 <img width="1415" alt="screen shot 2017-03-13 at 6 14 10 pm" src="https://cloud.githubusercontent.com/assets/18426780/23879083/fa0df756-0818-11e7-8569-469367b84280.png">
 
 # Links
-* [Demo on Youtube](https://www.youtube.com/watch?v=Jxi7U7VOMYg)
+* [Demo on Youtube](https://youtu.be/1Lq9vW3LuH8)
 * [Blog post](https://medium.com/@rizchel.a.dayao/my-journey-to-deploying-my-first-react-application-with-kubernetes-95e6d25f434d)
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/basics/usage-with-react)
