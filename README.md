@@ -22,7 +22,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Flow
 
-![Flow](docs/source/images/architecture.png)
+![Flow](https://media.github.ibm.com/user/1650/files/b0c988dc-31aa-11e8-867b-9558d5610cd7)
 
 1. The user accesses the application through the web interface. The user enters a movie title into the input.  
 2. The React application is rendered to the user on access.
