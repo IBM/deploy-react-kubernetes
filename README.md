@@ -103,7 +103,7 @@ You can now access the application at http://localhost:3000
 
 ### 2. Run the application on Kubernetes
 
-1. [Build Docker image.](#1-build-docker-image)
+1. [Build image.](#1-build-image)
 2. [Deploy the application](#2-deploy-the-application)
 
 ## Prerequisites
@@ -112,7 +112,7 @@ You can now access the application at http://localhost:3000
 $ bx cr namespace-add <your_namespace>
 ```
 
-### 1. Build Docker image
+### 1. Build image
 
 In a terminal, run:
 ```
@@ -122,7 +122,7 @@ $ bx cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy
 ### 2. Deploy the application
 
 ``` 
-$ kubectl run deploy-react-kubernetes-deployment —-image= registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
+$ kubectl run deploy-react-kubernetes-deployment —-image registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
 
 $ kubectl expose deployment/deploy-react-kubernetes-deployment 
 —-type=NodePort —-name=deploy-react-kubernetes-service —-port=3000
