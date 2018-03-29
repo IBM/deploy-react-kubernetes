@@ -7,14 +7,13 @@ install:
 script:
   - npm run eslint
   - npm run test
-before_deploy:
-  - curl -L https://clis.ng.bluemix.net/download/bluemix-cli/0.6.1/osx | sh
-  - chmod -R u+x ./Bluemix_CLI/bin
-  # - ./Bluemix_CLI/bin/bluemix plugin install container-registry -r Bluemix
-  - chmod +x ./deploy.sh
 cache:
   directories:
   - node_modules
+before_deploy:
+  - curl -L https://clis.ng.bluemix.net/download/bluemix-cli/0.6.1/linux64 | tar -zx
+  - chmod -R u+x ./Bluemix_CLI/bin
+  - chmod +x ./deploy.sh
 deploy:
   provider: script
   script: ./deploy.sh
