@@ -1,5 +1,5 @@
-echo 'working'
-./Bluemix_CLI/bin/bluemix --apikey $BXIAM
+echo $BXIAM
+./Bluemix_CLI/bin/bluemix login --apikey $BXIAM
 # export KUBECONFIG=$KUBECONFIG
 # kubectl delete all --all
 # bx cr build -t registry.ng.bluemix.net/rdayao/deploy-react-kubernetes .
