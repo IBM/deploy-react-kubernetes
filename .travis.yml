@@ -18,8 +18,7 @@ before_deploy:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - chmod +x ./deploy.sh
-deploy:
-  provider: script
+after_success:
   script:
     - echo $TRAVIS_COMMIT
     - echo $TRAVIS_TAG
