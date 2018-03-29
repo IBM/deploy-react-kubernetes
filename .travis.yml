@@ -20,6 +20,12 @@ before_deploy:
   - chmod +x ./deploy.sh
 deploy:
   provider: script
-  script: sh ./deploy.sh
+  script:
+    - echo $TRAVIS_COMMIT
+    - echo $TRAVIS_TAG
+    - echo $TRAVIS_BRANCH
+    - echo $TRAVIS_BUILD_NUMBER
+    - echo $TRAVIS_REPO_SLUG
+    - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM
   on:
     branch: deploy
