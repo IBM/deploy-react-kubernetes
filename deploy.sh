@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo 'hello'
 ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM
 # export KUBECONFIG=$KUBECONFIG
