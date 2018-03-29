@@ -13,6 +13,7 @@ cache:
 before_deploy:
   - curl -L https://clis.ng.bluemix.net/download/bluemix-cli/0.6.1/linux64 | tar -zx
   - chmod -R u+x ./Bluemix_CLI/bin
+  - ./Bluemix_CLI/bin plugin install container-registry -r Bluemix
   - chmod +x ./deploy.sh
 deploy:
   provider: script
