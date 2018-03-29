@@ -1,7 +1,6 @@
 #!/bin/bash
 echo 'hello'
-..
-ls
+# ls
 # bx login --apikey $BXIAM
 # export KUBECONFIG=$KUBECONFIG
 # kubectl delete all --all

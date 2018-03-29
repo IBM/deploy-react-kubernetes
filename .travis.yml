@@ -18,8 +18,9 @@ before_deploy:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - chmod +x ./deploy.sh
+  - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM
 deploy:
   provider: script
-  script: ./deploy.sh
+  script: sh ./deploy.sh
   on:
     branch: deploy
