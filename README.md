@@ -33,7 +33,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Kubernetes Cluster: Create and manage your own cloud infrastructure and use Kubernetes as your container orchestration engine.
 
 ## Featured technologies
-* Node.js: An open-source JavaScript run-time environment for executing server-side JavaScript code.
+* [Node.js](https://nodejs.org/en/): An open-source JavaScript run-time environment for executing server-side JavaScript code.
 * Cloud: Accessing computer and information technology resources through the Internet.
 * Container Orchestration: Automating the deployment, scaling and management of containerized applications.
 
@@ -44,7 +44,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 # Steps
 
 ## Prerequisites
-1. You must get an API key from [OMDb API](http://www.omdbapi.com/) in order to get a response from the API. You will insert your API key in /src/actions/index.js on line 42
+1. You must get an API key from [OMDb API](http://www.omdbapi.com/) in order to get a response from the API. You will insert your API key in `/src/actions/index.js` on line 42
 [OMDb API](http://www.omdbapi.com/) by Brian Fitz is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 2. Create an environment variable for your docker username
@@ -159,7 +159,7 @@ You can now access the application at http://IP_ADDRESS:NODE_PORT
 # Learn more
 
 * **Container Orchestration Code Patterns**: Enjoyed this Code Pattern? Check out our other [Container Orchestration Code Patterns](https://developer.ibm.com/code/technologies/container-orchestration/).
-* **Kubernetes on IBM Cloud**: Deliver your apps with the combined the power of [Kubernetes and Docker on IBM Cloud](https://www.ibm.com/cloud-computing/bluemix/containers)
+* **Kubernetes on IBM Cloud**: Deliver your apps with the combined power of [Kubernetes and Docker on IBM Cloud](https://www.ibm.com/cloud-computing/bluemix/containers)
 
 # License
 [Apache 2.0](LICENSE)
