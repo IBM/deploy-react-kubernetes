@@ -20,6 +20,6 @@ before_deploy:
   - chmod +x ./deploy.sh
 deploy:
   provider: script
-  script: ./deploy.sh
+  script: sh ./deploy.sh
   on:
     branch: deploy
