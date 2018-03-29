@@ -18,13 +18,8 @@ before_deploy:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - chmod +x ./deploy.sh
-after_success:
-  script:
-    - echo $TRAVIS_COMMIT
-    - echo $TRAVIS_TAG
-    - echo $TRAVIS_BRANCH
-    - echo $TRAVIS_BUILD_NUMBER
-    - echo $TRAVIS_REPO_SLUG
-    - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM
+deploy:
+  provider: script
+  script: ./deploy.sh
   on:
     branch: deploy
