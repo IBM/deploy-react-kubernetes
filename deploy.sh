@@ -1,7 +1,8 @@
 #!/bin/bash
 echo 'hello'
+..
 ls
-bx login --apikey $BXIAM
+# bx login --apikey $BXIAM
 # export KUBECONFIG=$KUBECONFIG
 # kubectl delete all --all
 # bx cr build -t registry.ng.bluemix.net/rdayao/deploy-react-kubernetes .
