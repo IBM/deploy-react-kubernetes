@@ -18,7 +18,7 @@ before_deploy:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - chmod +x ./deploy.sh
-  - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM
+  - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM -a https://api.ng.bluemix.net
 deploy:
   provider: script
   script: sh ./deploy.sh
