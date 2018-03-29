@@ -1,5 +1,6 @@
 #!/bin/bash
 echo 'hello'
+ls
 ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM
 # export KUBECONFIG=$KUBECONFIG
 # kubectl delete all --all
