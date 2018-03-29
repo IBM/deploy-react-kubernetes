@@ -7,9 +7,17 @@ install:
 script:
   - npm run eslint
   - npm run test
+before_deploy:
+  - curl -fsSL https://clis.ng.bluemix.net/install/osx | sh
+  # - chmod -R u+x ./Bluemix_CLI/bin
+  # - ./Bluemix_CLI/bin/bluemix plugin install container-registry -r Bluemix
+  - chmod +x ./deploy.sh
 cache:
   directories:
   - node_modules
-branches:
-  only:
-  - master
+deploy:
+  provider: script
+  script: ./deploy.sh
+  on:
+    repo: IBM/deploy-react-kubernetes
+    branch: deploy

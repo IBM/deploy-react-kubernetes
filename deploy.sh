@@ -1,0 +1,1 @@
+bx login --apikey $BXIAM
