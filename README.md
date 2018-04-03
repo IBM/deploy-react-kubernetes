@@ -14,7 +14,7 @@ An application must be packaged into a container to deploy on Kubernetes. Docker
 
 In this Code Pattern, we will deploy a React application using Kubernetes.
 
-This repository uses the React Javascript library alongisde Redux to build out the front end of the application. The OMDb API is used to get movie information based on user input. Redux handles the data between the application and the API, as well as the state between components. Docker is used to package the application and Kubernetes is used to deploy the container.
+This repository uses the React Javascript library alongside Redux to build out the front end of the application. The OMDb API is used to get movie information based on user input. Redux handles the data between the application and the API, as well as the state between components. Docker is used to package the application and Kubernetes is used to deploy the container.
 
 When the reader has completed this Code Pattern, they will understand how to:
 * Containerize a React application using Docker
