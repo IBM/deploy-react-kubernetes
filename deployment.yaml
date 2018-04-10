@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: deploy-react-kubernetes-service
+  labels:
+    app: app
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+    name: http
+    nodePort: 30080
+  selector:
+    app: app
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: deploy-react-kubernetes-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: deploy-react-kubernetes
+        image: registry.ng.bluemix.net/rdayao/deploy-react-kubernetes
+        ports:
+        - containerPort: 3000
