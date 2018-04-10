@@ -26,6 +26,6 @@ spec:
     spec:
       containers:
       - name: deploy-react-kubernetes
-        image: registry.ng.bluemix.net/rdayao/deploy-react-kubernetes
+        image: registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
         ports:
         - containerPort: 3000
