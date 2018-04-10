@@ -21,9 +21,7 @@ before_deploy:
   - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM -a https://api.ng.bluemix.net
   - export KUBECONFIG=$KUBECONFIG
   - ./Bluemix_CLI/bin/bluemix  cr build -t registry.ng.bluemix.net/rdayao/deploy-react-kubernetes .
-  - ./kubectl run deploy --image=registry.ng.bluemix.net/rdayao/deploy-react-kubernetes
-  - ./kubectl expose deployment/deploy —-type=NodePort —-name=deploy-react-kubernetes-service —-port=3000
-  # - ./kubectl delete all --all
+  - ./kubectl create -f deployment.yaml
 deploy:
   provider: script
   script: sh ./deploy.sh
