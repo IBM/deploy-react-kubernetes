@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - 6.9.0
+env:
+  global:
+  - KUBECONFIG=$KUBECONFIG
 install:
   - npm i -g npm@3
   - npm install
@@ -15,11 +18,10 @@ before_deploy:
   - chmod -R u+x ./Bluemix_CLI/bin
   - ./Bluemix_CLI/bin/bluemix plugin install container-registry -r Bluemix
   - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-  - chmod +x ./kubectl
+  - chmod u+x ./kubectl
   # - sudo mv ./kubectl /usr/local/bin/kubectl
   - chmod +x ./deploy.sh
   - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM -a https://api.ng.bluemix.net
-  - export KUBECONFIG=$KUBECONFIG
   - ./Bluemix_CLI/bin/bluemix  cr build -t registry.ng.bluemix.net/rdayao/deploy-react-kubernetes .
   - ./kubectl create -f deployment.yaml
 deploy:
