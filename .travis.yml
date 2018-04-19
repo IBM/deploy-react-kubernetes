@@ -23,8 +23,8 @@ before_deploy:
   - chmod +x ./deploy.sh
   - ./Bluemix_CLI/bin/bluemix login --apikey $BXIAM -a https://api.ng.bluemix.net
   - ./Bluemix_CLI/bin/bluemix  cr build -t registry.ng.bluemix.net/rdayao/deploy-react-kubernetes .
-  - OUTPUT=$(./Bluemix_CLI/bin/bluemix cs cluster-config rizchel-codepattern)
-  - echo $OUTPUT
+  - ./Bluemix_CLI/bin/bluemix cs cluster-config rizchel-codepattern
+  # - echo $OUTPUT
   # - sudo cp /etc/kubernetes/admin.conf $HOME/
   # - sudo chown $(id -u):$(id -g) $HOME/admin.conf
   # - export KUBECONFIG=$HOME/admin.conf
