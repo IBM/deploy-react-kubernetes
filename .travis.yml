@@ -17,6 +17,7 @@ before_deploy:
   - curl -L https://clis.ng.bluemix.net/download/bluemix-cli/0.6.6/linux64 | tar -zx
   - chmod -R u+x ./Bluemix_CLI/bin
   - ./Bluemix_CLI/bin/bluemix plugin install container-registry -r Bluemix
+  - ./Bluemix_CLI/bin/bluemix plugin install container-service -r Bluemix
   - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
   - chmod u+x ./kubectl
   # - sudo mv ./kubectl /usr/local/bin/kubectl
