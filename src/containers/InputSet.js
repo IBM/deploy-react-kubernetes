@@ -32,7 +32,8 @@ class InputSet extends Component {
   }
 
   // Function for when 'search' is clicked and retrieves movies
-  handleResponse(input) {
+  handleResponse() {
+    const { input } = this.state;
     const { retrieveMovies } = this.props;
     retrieveMovies(input);
   }
@@ -44,9 +45,8 @@ class InputSet extends Component {
 
   // Function for 'enter' key press
   handleKeyPress(target) {
-    const { input } = this.state;
    if(target.charCode===13){
-     this.handleResponse(input);
+     this.handleResponse();
    }
  }
 
