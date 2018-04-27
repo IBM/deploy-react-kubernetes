@@ -124,7 +124,7 @@ $ bx cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy
 ### 2. Deploy the application
 
 ``` 
-$ kubectl run deploy-react-kubernetes-deployment —-image registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
+$ kubectl run deploy-react-kubernetes-deployment —-image=registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
 
 $ kubectl expose deployment/deploy-react-kubernetes-deployment 
 —-type=NodePort —-name=deploy-react-kubernetes-service —-port=3000
