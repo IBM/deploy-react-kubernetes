@@ -80,6 +80,11 @@ $ npm run start
 1. [Build the image](#1-build-the-image)
 2. [Run the image](#2-run-the-image)
 
+## Prerequisites:
+1. [Create Docker account](https://cloud.docker.com/)
+ 
+2. [Install Docker CLI](https://docs.docker.com/install/)
+
 ### 1. Build the image
 
 In a terminal, run:
@@ -109,10 +114,41 @@ You can now access the application at http://localhost:3000
 2. [Deploy the application](#2-deploy-the-application)
 
 ## Prerequisites
-* Create a namespace 
+1. [Create an account with IBM Cloud](https://console.bluemix.net/registration/)
+
+2. [Install IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)
+
+3. Log in to your IBM Cloud account
+
+4. Install the Container Registry plug-in.
 ```
-$ bx cr namespace-add <your_namespace>
+bx plugin install container-registry -r Bluemix
 ```
+
+5. Install the Container Service plug-in.
+```
+bx plugin install IBM-Containers -r Bluemix
+```
+
+6. [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)
+
+7. Create cluster
+```
+bx cs cluster-create --name YOUR_CLUSTER_NAME
+```
+
+8. Configure Kubernetes cluster
+```
+$ bx cs cluster-config YOUR_CLUSTER_NAME
+```
+
+Copy and paste response in CLI
+
+9. Create a namespace
+```
+$ bx cr namespace-add YOUR_NAMESPACE
+```
+
 
 ### 1. Build image
 
