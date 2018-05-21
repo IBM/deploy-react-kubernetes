@@ -29,7 +29,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 3. The application calls the OMDb API and receives a JSON object of the response to show the user.
 
 ## Included components
-* IBM Cloud Container Service: IBM Bluemix Container Service manages highly available apps inside Docker containers and Kubernetes clusters on the IBM Cloud.
+* IBM Cloud Container Service: IBM Cloud Container Service manages highly available apps inside Docker containers and Kubernetes clusters on the IBM Cloud.
 * Kubernetes Cluster: Create and manage your own cloud infrastructure and use Kubernetes as your container orchestration engine.
 
 ## Featured technologies
@@ -195,7 +195,7 @@ You can now access the application at http://IP_ADDRESS:NODE_PORT
 # Learn more
 
 * **Container Orchestration Code Patterns**: Enjoyed this Code Pattern? Check out our other [Container Orchestration Code Patterns](https://developer.ibm.com/code/technologies/container-orchestration/).
-* **Kubernetes on IBM Cloud**: Deliver your apps with the combined power of [Kubernetes and Docker on IBM Cloud](https://www.ibm.com/cloud-computing/bluemix/containers)
+* **Kubernetes on IBM Cloud**: Deliver your apps with the combined power of [Kubernetes and Docker on IBM Cloud](https://www.ibm.com/cloud/container-service)
 
 # License
 [Apache 2.0](LICENSE)
