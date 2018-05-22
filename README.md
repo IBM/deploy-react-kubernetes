@@ -76,6 +76,8 @@ $ npm run build-css
 $ npm run start
 ```
 
+Verify app is running and working correctly.
+
 ## Run the application using Docker
 1. [Build the image](#1-build-the-image)
 2. [Run the image](#2-run-the-image)
@@ -84,6 +86,8 @@ $ npm run start
 1. [Create Docker account](https://cloud.docker.com/)
  
 2. [Install Docker CLI](https://docs.docker.com/install/)
+
+3. [Retrieve and save your Docker user id](https://cloud.docker.com/)
 
 ### 1. Build the image
 
@@ -98,7 +102,7 @@ Your image should be listed by running:
 $ docker images
 ```
 
-### 1. Run the image
+### 2. Run the image
 
 In a terminal, run:
 
@@ -108,7 +112,7 @@ $ docker run -p 3000:3000 -d $docker_username/deploy-react-kubernetes
 
 You can now access the application at http://localhost:3000
 
-### 2. Run the application on Kubernetes
+## Run the application on Kubernetes
 
 1. [Build image.](#1-build-image)
 2. [Deploy the application](#2-deploy-the-application)
@@ -118,7 +122,12 @@ You can now access the application at http://localhost:3000
 
 2. [Install IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)
 
-3. Log in to your IBM Cloud account
+3. Log into your IBM Cloud account
+```
+bx login 
+```
+
+If you have a federated ID, use bx login --sso to log in to the IBM Cloud CLI.
 
 4. Install the Container Registry plug-in.
 ```
@@ -144,7 +153,7 @@ $ bx cs cluster-config YOUR_CLUSTER_NAME
 
 Copy and paste response in CLI
 
-9. Create a namespace
+9. Choose a name for your first namespace, and create that namespace. Use this namespace for the rest of the Quick Start.
 ```
 $ bx cr namespace-add YOUR_NAMESPACE
 ```
@@ -152,7 +161,7 @@ $ bx cr namespace-add YOUR_NAMESPACE
 
 ### 1. Build image
 
-In a terminal, run:
+Build image in the IBM Container Registry: 
 ```
 $ bx cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes .
 ```
@@ -161,7 +170,16 @@ $ bx cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy
 
 ``` 
 $ kubectl run deploy-react-kubernetes-deployment —-image=registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
+```
 
+To check how many pods are running on Kubernetes run the command: 
+```
+kubectl get pods
+```
+
+Expose the app to the web by setting the port. Run the command:
+
+```
 $ kubectl expose deployment/deploy-react-kubernetes-deployment 
 —-type=NodePort —-name=deploy-react-kubernetes-service —-port=3000
 ```
@@ -179,6 +197,14 @@ $ kubectl describe service deploy-react-kubernetes-service
 ```
 
 You can now access the application at http://IP_ADDRESS:NODE_PORT
+
+## Run the application on Kubernetes with a yaml file
+
+Note: Follow the prerequisites in 'Run the application on Kubernetes section' before executing command below. 
+
+```
+kubectl create -f deployment.yaml
+```
 
 # Sample output
 
