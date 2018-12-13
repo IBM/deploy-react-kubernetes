@@ -180,8 +180,7 @@ kubectl get pods
 Expose the app to the web by setting the port. Run the command:
 
 ```
-$ kubectl expose deployment/deploy-react-kubernetes-deployment 
-—-type=NodePort —-name=deploy-react-kubernetes-service —-port=3000
+$ kubectl expose deployment/deploy-react-kubernetes-deployment —-port=3000 —-type=NodePort
 ```
 
 * To access your application. You would need the public IP address of your cluster and NodePort of the service.
