@@ -38,6 +38,9 @@
     "react-router": "^3.0.2",
     "redux": "^3.5.2"
   },
+  "jest": {
+    "testURL": "http://localhost/"
+  },
   "scripts": {
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",

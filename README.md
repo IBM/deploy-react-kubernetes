@@ -124,38 +124,38 @@ You can now access the application at http://localhost:3000
 
 3. Log into your IBM Cloud account
 ```
-bx login 
+ibmcloud login 
 ```
 
-If you have a federated ID, use bx login --sso to log in to the IBM Cloud CLI.
+If you have a federated ID, use ibmcloud login --sso to log in to the IBM Cloud CLI.
 
 4. Install the Container Registry plug-in.
 ```
-bx plugin install container-registry -r Bluemix
+ibmcloud plugin install container-registry -r Bluemix
 ```
 
 5. Install the Container Service plug-in.
 ```
-bx plugin install IBM-Containers -r Bluemix
+ibmcloud plugin install IBM-Containers -r Bluemix
 ```
 
 6. [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)
 
 7. Create cluster
 ```
-bx cs cluster-create --name YOUR_CLUSTER_NAME
+ibmcloud cs cluster-create --name YOUR_CLUSTER_NAME
 ```
 
 8. Configure Kubernetes cluster
 ```
-$ bx cs cluster-config YOUR_CLUSTER_NAME
+$ ibmcloud cs cluster-config YOUR_CLUSTER_NAME
 ```
 
 Copy and paste response in CLI
 
 9. Choose a name for your first namespace, and create that namespace. Use this namespace for the rest of the Quick Start.
 ```
-$ bx cr namespace-add YOUR_NAMESPACE
+$ ibmcloud cr namespace-add YOUR_NAMESPACE
 ```
 
 
@@ -163,7 +163,7 @@ $ bx cr namespace-add YOUR_NAMESPACE
 
 Build image in the IBM Container Registry: 
 ```
-$ bx cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes .
+$ ibmcloud cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes .
 ```
 
 ### 2. Deploy the application
@@ -187,7 +187,7 @@ $ kubectl expose deployment/deploy-react-kubernetes-deployment —-port=3000 —
 
 ```
 # For clusters provisioned with IBM Cloud
-$ bx cs workers YOUR_CLUSTER_NAME
+$ ibmcloud cs workers YOUR_CLUSTER_NAME
 ```
 
 ```
@@ -223,4 +223,6 @@ kubectl create -f deployment.yaml
 * **Kubernetes on IBM Cloud**: Deliver your apps with the combined power of [Kubernetes and Docker on IBM Cloud](https://www.ibm.com/cloud/container-service)
 
 # License
-[Apache 2.0](LICENSE)
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](http://www.apache.org/licenses/LICENSE-2.0.txt).
+
+[Apache Software License (ASL) FAQ](http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
