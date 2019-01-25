@@ -169,7 +169,7 @@ $ ibmcloud cr build -t registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/
 ### 2. Deploy the application
 
 ``` 
-$ kubectl run deploy-react-kubernetes-deployment —-image=registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
+$ kubectl run deploy-react-kubernetes-deployment --image=registry.<ibm_cloud_region>.bluemix.net/<your_namespace>/deploy-react-kubernetes
 ```
 
 To check how many pods are running on Kubernetes run the command: 
