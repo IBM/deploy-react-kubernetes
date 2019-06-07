@@ -12,49 +12,47 @@ You may obtain a copy of the License at
  See the License for the specific language governing permissions and
  limitations under the License.*/
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import Input from '../components/Input'
-import * as MoviesAction from '../actions'
-import { bindActionCreators } from 'redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Input from '../components/Input';
+import * as MoviesAction from '../actions';
+import { bindActionCreators } from 'redux';
 
 class InputSet extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      input: '',
-    }
-
-    this.handleKeyPress = this.handleKeyPress.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.handleResponse = this.handleResponse.bind(this)
-  }
+  state = {
+    input: '',
+  };
 
   // Function for when 'search' is clicked and retrieves movies
-  handleResponse() {
+  handleResponse = () => {
     const { input } = this.state;
     const { retrieveMovies } = this.props;
     retrieveMovies(input);
-  }
+  };
 
   // Function for when text in input changes
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({ input: e.target.value });
-  }
+  };
 
   // Function for 'enter' key press
-  handleKeyPress(target) {
-   if(target.charCode===13){
-     this.handleResponse();
-   }
- }
+  handleKeyPress = (target) => {
+    if (target.charCode === 13) {
+      this.handleResponse();
+    }
+  };
 
   render() {
     const { input } = this.state;
     return (
       <div className="input-set">
-        <Input movieValue={input} handleChange={this.handleChange} handleKeyPress={this.handleKeyPress} handleResponse={this.handleResponse}/>
+        <Input
+          movieValue={input}
+          handleChange={this.setUserInput}
+          handleKeyPress={this.handleKeyPress}
+          handleResponse={this.handleResponse}
+        />
       </div>
     );
   }
@@ -63,19 +61,19 @@ class InputSet extends Component {
 // Set state and action as proptype
 InputSet.PropTypes = {
   movies: PropTypes.object,
-  retrieveMovies: PropTypes.func
-}
+  retrieveMovies: PropTypes.func,
+};
 
 // Map Redux state to props
-function mapStateToProps(state) {
-  return {
-    movies: state.movies
-  };
-}
+const mapStateToProps = ({ movies }) => ({ movies });
 
 // Map action to props
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(Object.assign({}, MoviesAction), dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(InputSet);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(InputSet);
+
