@@ -12,49 +12,30 @@ You may obtain a copy of the License at
  See the License for the specific language governing permissions and
  limitations under the License.*/
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Input extends Component {
-  constructor (props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.handleResponse = this.handleResponse.bind(this);
-  }
-
-  //Callbacks for when user input changes or 'search' is clicked
-  handleChange(e) {
-    const { handleChange } = this.props;
-    handleChange(e);
-  }
-
-  handleKeyPress(target) {
-    const { handleKeyPress } = this.props;
-    handleKeyPress(target);
-  }
-
-  handleResponse() {
-    const { handleResponse, input } = this.props;
-    handleResponse(input);
-  }
-
-  render() {
-    const { input } = this.props;
-    return (
-      <div className="set">
-        <input type="text" className="input" placeholder="Enter movie..." value={input} onChange={this.handleChange} onKeyPress={this.handleKeyPress}/>
-        <button className="button" onClick={this.handleResponse}>Search</button>
-      </div>
-    );
-  }
-}
+const Input = ({ input, handleChange, handleKeyPress, handleResponse }) => (
+  <div className="set">
+    <input
+      type="text"
+      className="input"
+      placeholder="Enter movie..."
+      value={input}
+      onChange={handleChange}
+      onKeyPress={handleKeyPress}
+    />
+    <button className="button" onClick={handleResponse}>
+      Search
+    </button>
+  </div>
+);
 
 Input.PropTypes = {
   input: PropTypes.string,
   handleChange: PropTypes.func,
   handleKeyPress: PropTypes.func,
   handleResponse: PropTypes.func,
-}
+};
 
 export default Input;
